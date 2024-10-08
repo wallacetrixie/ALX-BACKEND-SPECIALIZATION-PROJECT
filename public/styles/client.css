@@ -13,15 +13,16 @@ body {
   justify-content: evenly;
   padding-left: 100px;
   padding-right: 100px;
-  margin: 0 auto;
+  background-color:red;
+  margin: auto;
   height: auto;
-  flex-direction: column-reverse;
-  width: 100%;
+  flex-direction: row;
+
 }
 
 .profile-section {
   background-color: white;
-  width: 100%;
+  width: 29%;
   border: none;
   height: auto;
   margin-top: 20px;
@@ -499,15 +500,16 @@ p {
 }
 
 .container {
-  max-width: 1500px;
+  width:80%;
   margin: auto;
+  margin-top:80px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
 
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   overflow: hidden;
   height: auto;

@@ -1,172 +1,212 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.input-group {
-    
-    margin-bottom: 15px;
-}
-
-.input-group i {
-
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888;
-}
-
-.input-group input {
-    padding-left: 35px;
-    width: 100%;
-    box-sizing: border-box;
-    height: 40px;
-}
-
-.auth-container {
-    width: 100%;
-    max-width: 700px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+.container {
+  background-color: white;
+  padding: 20px;
+  width: 90%;  /* Sets the width to 90% of the viewport, adjusting for smaller screens */
+  max-width: 800px;  /* Limits the container's width on larger screens */
+  height: auto;
+  border-radius: 8px;
+  margin: 20px auto;  /* Centers the container with equal margins */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+form {
+  text-align: center;
+ 
 }
 
-.form-toggle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+h2 {
+  margin-bottom: 20px;
+  color: orange;
 }
 
-.form-toggle button {
-    width: 50%;
-    padding: 10px 0;
-    border: none;
-    background-color: #f4f4f4;
-    color: #666;
-    cursor: pointer;
-    transition: background-color 0.3s;
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
 }
 
-.form-toggle button.active {
-    background-color: #1a73e8;
-    color: white;
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.auth-form {
-    width: 100%;
+button {
+  width: 100%;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.auth-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #6b6969;
-    font-weight:bolder;
+button:hover {
+  background-color: #2980b9;
 }
 
-.auth-form label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
+.signup-link,
+.login-link {
+  margin-top: 15px;
+  text-align: center;
 }
 
-.auth-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+a {
+  color: #3498db;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+a:hover {
+  text-decoration: underline;
 }
 
-.submit-btn:hover {
-    background-color: #1669c7;
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .auth-container {
-        width:80%;
-    }
+.login-options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        height:auto;
+      }
+      .login-option {
+        flex: 1;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .login-option:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+      }
+      .login-option input[type="radio"]:focus,
+      .login-option input[type="radio"]:active {
+        outline: none;
+      }
+      .login-option label {
+        font-size: 18px;
+        color: #555;
+        transition: color 0.3s ease;
+        display: block;
+      }
+      .login-option:hover label {
+        color: #007bff;
+      }
+      .login-description {
+        font-size: 14px;
+        color: #888;
+      }
+     
 
-    .auth-form h2 {
-        font-size: 1.5rem;
-    }
+  
+      .login-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+          .login-container {
+        background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+        padding: 0px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        max-width: 1000px;
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        animation: slideIn 1s ease-in-out;
+      }
 
-    .auth-form input, .submit-btn {
-        font-size: 0.9rem;
-    }
-}
+      @keyframes slideIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-@media (max-width: 480px) {
-    .auth-container {
-        padding: 10px;
-    }
+      .login-options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .login-option {
+        flex: 1;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .login-option:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+      }
+      .login-option input[type="radio"]:focus,
+      .login-option input[type="radio"]:active {
+        outline: none;
+      }
+      .login-option label {
+        font-size: 18px;
+        color: #555;
+        transition: color 0.3s ease;
+        display: block;
+      }
+      .login-option:hover label {
+        color: #007bff;
+      }
+      .login-description {
+        font-size: 14px;
+        color: #888;
+      }
+     
 
-    .logo {
-        width: 80px;
-    }
+      .login-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-    .form-toggle button {
-        padding: 8px 0;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
 
-    .auth-form input, .submit-btn {
-        padding: 8px;
-    }
 
-    .auth-form h2 {
-        font-size: 1.2rem;
-    }
-
-    .auth-form label {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 360px) {
-    .auth-container {
-        padding: 5px;
-    }
-
-    .logo {
-        width: 60px;
-    }
-
-    .auth-form h2 {
-        font-size: 1rem;
-    }
-
-    .auth-form input, .submit-btn {
-        font-size: 0.8rem;
-        padding: 7px;
-    }
-
-    .auth-form label {
-        font-size: 0.8rem;
-    }
-}
+      .container p {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        margin: 20px 0;
+      }

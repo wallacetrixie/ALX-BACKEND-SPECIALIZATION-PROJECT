@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(img.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Add Smooth Glowing Edges */
+.glow-effect:hover {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.7);
+}
+
+.wrapper {
+  width: 500px;
+  height:500px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  padding: 30px 40px;
+  margin-left:50px;
+  margin-top:-270px;
+  
+  
+  
+  /* Introduce Box Shadow Technique */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  
+  /* Text Shadow Enhancement */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(255, 165, 0, 0.7);
+}
+
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+  
+  /* Introduce Box Shadow Technique */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+  
+  /* Introduce Box Shadow Technique */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+  
+  /* Text Shadow Enhancement */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(255, 165, 0, 0.7);
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* ... (Previous CSS code) ... */
+
+.wrapper .btn {
+  width:100px;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  margin-left:250px;
+  background-color:rgb(233, 182, 14);
+  margin-top:20px;
+  border-radius:20px;
+  
+  /* Introduce Box Shadow Technique */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  
+  /* Text Shadow Enhancement */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper .btn:hover {
+  background-color: #eee;
+  color: #555;
+  
+  /* Glow effect on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.7);
+  
+  /* Enhanced text glow on hover */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4), 2px 2px 6px rgba(255, 165, 0, 0.7);
+}
+
+/* ... (Rest of the CSS code) ... */
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  
+  /* Text Shadow Enhancement */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(255, 165, 0, 0.7);
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
