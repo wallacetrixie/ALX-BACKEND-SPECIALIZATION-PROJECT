@@ -13,10 +13,11 @@ const images = [
 ];
 
 const texts = [
-  "Organize, Plan, and Celebrate with Ease",
-  "Streamline Your Event Management",
-  "Get All Your Guests Managed Effortlessly",
-  "Enjoy easy Event Coordination",
+  "Post Tasks, Hire experts, and Get Work Done",
+"Simplify Your Freelancing Workflow",
+"Connect with Skilled Freelancers",
+"Enjoy easy task Management",
+
 ];
 
 let currentIndex = 0;
