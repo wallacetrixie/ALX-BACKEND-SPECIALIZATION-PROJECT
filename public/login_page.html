@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/login.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <title>Login Form</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <form id="loginForm" action="/login" method="POST">
+      <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+      <label for="username"><i class="fas fa-user"></i> Username:</label>
+      <input type="text" id="username" name="username" required />
+      <label for="password"><i class="fas fa-lock"></i> Password:</label>
+      <input type="password" id="password" name="password" required />
+      <button type="submit"><i class="fas fa-sign-in-alt"></i> Log In</button>
+      <p class="signup-link">
+        Don't have an account?
+        <a href="#" onclick="showSignUpForm()">Sign Up</a>
+      </p>
+    </form>
+    <!-- Sign Up Form -->
+    <form
+      id="signupForm"
+      style="display: none"
+      action="/register"
+      method="POST"
+    >
+      <h2><i class="fas fa-user-plus"></i> Sign Up</h2>
+      <label for="newUsername"><i class="fas fa-user"></i> Username:</label>
+      <input type="text" id="newUsername" name="username" required pattern="[A-Za-z]{4,}" title="Username must contain only letters and be at least 4 characters long" />
+
+      <label for="newPassword"><i class="fas fa-lock"></i> Password:</label>
+      <input
+        type="password"
+        id="newPassword"
+        name="password"
+        oninput="checkPasswordStrength()"
+        required
+      />
+      <div
+        id="passwordStrengthMessage"
+        class="error-message"
+        style="display: none"
+      ></div>
+      <label for="confirmPassword"
+        ><i class="fas fa-lock"></i> Confirm Password:</label
+      >
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+      />
+     <div class="login-options">
+  <div class="login-option" id="clientOption">
+    <input type="radio" id="client" name="registrationType" value="client" />
+    <label for="client"><i class="fas fa-user"></i> Register as a Client</label><br />
+    <span class="login-description">I want to find and hire someone to solve my enquiries</span>
+  </div>
+  <div class="login-option" id="freelancerOption">
+    <input type="radio" id="freelancer" name="registrationType" value="freelancer" />
+    <label for="freelancer"><i class="fas fa-briefcase"></i> Register as an Expert</label><br />
+    <span class="login-description">I am an expert looking for tasks to solve</span>
+  </div>
+</div>
+
+
+      <button type="submit" id="signupButton" onclick="registerUser()" disabled><i class="fas fa-user-plus"></i> Sign Up</button>
+
+      <p class="login-link">
+        Already have an account?
+        <a href="#" onclick="showLogInForm()">Log In</a>
+      </p>
+    </form>
+
+  </div>
+
+  <script src="/scripts/login.js"></script>
+</body>
+</html>

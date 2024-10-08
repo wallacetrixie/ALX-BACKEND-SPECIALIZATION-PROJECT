@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+           
+            padding-top: 20px;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1{
+            
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-section {
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .profile-section h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .profile-field {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .profile-field strong {
+            font-weight: bold;
+            margin-right: 5px;
+            color: #222;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Profile Settings</h1>
+        </div>
+        <div class="profile-section" id="general-info"></div>
+        <form action="/submit-client" method="post">
+            <div class="form-group">
+                <label for="full-name"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="full-name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+          <div class="form-group">
+                <label for="age"><i class="fas fa-birthday-cake"></i> Age</label>
+                <input type="date" id="age" name="age" placeholder="Enter your age" required>
+                <div id="age-error" class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="country"><i class="fas fa-globe"></i> Country</label>
+                <input type="text" id="country" name="country" placeholder="Enter your country" required>
+            </div>
+            <div class="form-group">
+                <label for="city"><i class="fas fa-city"></i> City</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            </div>
+            <div class="text-right">
+                <button type="submit" class="btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        window.onload = function () {
+            fetch('/clients')
+                .then(response => response.json())
+                .then(data => {
+                    const generalInfoDiv = document.getElementById('general-info');
+                    data.forEach(client => {
+                        generalInfoDiv.innerHTML = `
+                            <h2>General Information</h2>
+                            <div class="profile-field"><strong>Name:</strong> ${client.name}</div>
+                            <div class="profile-field"><strong>Email:</strong> ${client.email}</div>
+                            <div class="profile-field"><strong>Phone:</strong> ${client.phone}</div>
+                            <div class="profile-field"><strong>Age:</strong> ${client.age}</div>
+                            <div class="profile-field"><strong>Country:</strong> ${client.country}</div>
+                            <div class="profile-field"><strong>City:</strong> ${client.city}</div>
+                        `;
+                    });
+                })
+                .catch(error => console.error('Error fetching clients:', error));
+        };
+        document.getElementById('client-form').addEventListener('submit', function (event) {
+    const ageInput = document.getElementById('age');
+    const enteredDate = new Date(ageInput.value);
+    const currentDate = new Date();
+    const ageInMilliseconds = currentDate - enteredDate;
+    const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Approximate conversion to years
+
+    if (ageInYears < 18) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById('age-error').innerText = 'You must be at least 18 years old.';
+    }
+});
+
+    </script>
+</body>
+
+</html>

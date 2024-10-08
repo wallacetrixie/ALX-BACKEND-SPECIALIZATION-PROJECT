@@ -1,0 +1,225 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+/* Adjusted styles for received messages */
+.message-container .received-message {
+    background-color: #eaeaea; /* Light gray background for received messages */
+    color: #000; /* Black text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding around the message */
+    max-width: fit-content;
+    margin-bottom: 10px; /* Add spacing between messages */
+    align-items: flex-start; /* Align received messages to the left */
+}
+
+/* Adjusted styles for sent messages */
+.message-container .sent-message {
+    background-color: #007bff; /* Blue background for sent messages */
+    color: #fff; /* White text color */
+    border-radius: 10px; 
+    padding: 10px; 
+    max-width: fit-content;
+    margin-bottom: 10px; 
+    align-self: flex-end; /* Align sent messages to the right */
+}
+
+
+
+
+.message-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: calc(10%);
+    left: 0;
+    z-index: 9;
+    transition: display 0.5s ease-in-out; /* Transition for display property */
+}
+
+/* Styling for icon buttons */
+.message-input-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.message-input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for icon inside button */
+.message-input-container button i {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Rest of your CSS styles remain unchanged */
+.container {
+    width: 450px;
+    margin-left: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-container {
+    height: 500px;
+    overflow-y: auto;
+    background-color: rgb(249, 252, 245);
+    padding: 10px;
+}
+/* Add styles for received messages */
+
+
+
+
+
+
+.message-text {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Set font size */
+    line-height: 1.4; /* Set line height */
+}
+
+
+.placeholder {
+    color: #aaa;
+}
+
+.message-input-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.send-button,
+.clear-button,
+.delete-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.send-button,
+.message-input-container button {
+    background-color: #007bff;
+    color: white;
+}
+
+.clear-button {
+    background-color: #f44336;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(105, 179, 175);
+    color: white;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 250px;
+}
+
+.icons i {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    cursor: pointer;
+}
+
+.options {
+    margin-left: auto; /* Pushes the options to the rightmost side */
+}
+
+.options i {
+    font-size: 20px;
+    color: #555; /* Icon color */
+    cursor: pointer;
+}
+
+.options i:hover {
+    color: #333; /* Hover color */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-details .name {
+    margin: 0;
+    font-size: 16px;
+}
+
+.options i {
+    font-size: 20px;
+    color: #fff; /* Icon color */
+    cursor: pointer;
+}
+
+.options i:hover {
+    color: #f0f0f0; /* Hover color */
+}

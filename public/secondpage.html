@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 2 - Receive Files</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #fac108;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #fileList {
+      margin-top: 20px;
+    }
+
+    .file-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #e9f0f5;
+      border-radius: 5px;
+    }
+
+    .download-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #2cb610;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Received Files</h1>
+    <div id="fileList"></div>
+  </div>
+
+  <script>
+     document.addEventListener('DOMContentLoaded', function () {
+      fetch('/files')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch files from the server.');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const fileList = document.getElementById('fileList');
+          if (data.length > 0) {
+            fileList.innerHTML = data.map(file => `
+              <div class="file-container">
+                <span>${file.name}</span>
+                <a href="/download/${file.id}" class="download-button" target="_blank"><i class="fas fa-download"></i> Download</a>
+              </div>
+            `).join('');
+          } else {
+            fileList.innerHTML = '<p>No files have been sent Yet</p>';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred while retrieving files.');
+        });
+    });
+  </script>
+</body>
+
+</html>

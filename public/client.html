@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<a href="https:/wa.me/254725618425"  target="_blank" class="whatsapp_float"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles/client.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/review.css">
+     <link rel="stylesheet" href="styles/footer.css">
+      <link rel="stylesheet" href="styles/contact.css">
+      <link rel="stylesheet" href="styles/homepage.css">
+    <title>Clients dashboard</title>
+</head>
+<body>
+  <div id="content">
+    <nav class="nav">
+    <h1 class="head">Taskify</h1>
+   <form action="#" class="search-form">
+    <div class="form-input">
+        <input type="search" placeholder="Search For popular gigs" id="searchInput" class="search">
+        <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+    </div>
+</form>
+    <div class="dropdown" id="profile-dropdown">
+        <img src="images/user.jpeg" class="profile-pic" id="profile-icon" onclick="toggleDropdown()">
+     
+        <div id="notification-div">
+        </div>
+        <div class="profile-details">
+            <img src="images/user.jpeg" class="dropdown-pic">
+            <div class="name"><p class="user-name"></p></div>
+            <div class="account"><p>Account Type Client</p></div>
+            <button id="myAccountBtn" class="btn btn-settings"><i class="fas fa-cog"></i> Settings</button>
+           <button class="btn btn-message" onclick="redirectToPage1()"><i class="fas fa-message"></i> Messages</button>
+            <button id="logoutBtn" class="btn btn-logout"><i class="fas fa-sign-out-alt"></i>Logout</button>
+            
+        </div>
+    </div>
+</nav>
+ 
+        <div class="options-container">
+            <div class="options">
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="graphics-design">Graphics and design</a>
+                    <div class="dropdown-content" id="graphics-design">
+                        <a href="#"><i class="fas fa-paint-brush"></i> Graphic Design</a>
+                        <a href="#"><i class="fas fa-palette"></i> Logo Design</a>
+                        <a href="#"><i class="fas fa-images"></i> Illustration</a>
+                        <a href="#"><i class="fas fa-desktop"></i> UI/UX Design</a>
+                    </div>
+                </div>
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="programming-tech">Programming and tech</a>
+                    <div class="dropdown-content" id="programming-tech">
+                        <a href="#"><i class="fas fa-laptop-code"></i> Web Development</a>
+                        <a href="#"><i class="fas fa-mobile-alt"></i> Mobile App Development</a>
+                        <a href="#"><i class="fas fa-code"></i> Software Engineering</a>
+                        <a href="#"><i class="fas fa-database"></i> Data Science</a>
+                    </div>
+                </div>
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="software-dev">Software development</a>
+                    <div class="dropdown-content" id="software-dev">
+                        <a href="#"><i class="fas fa-cogs"></i> Agile Development</a>
+                        <a href="#"><i class="fas fa-tools"></i> DevOps</a>
+                        <a href="#"><i class="fas fa-check-circle"></i> Quality Assurance</a>
+                        <a href="#"><i class="fas fa-tasks"></i> Project Management</a>
+                    </div>
+                </div>
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="manual-labour">Manual labour services</a>
+                    <div class="dropdown-content" id="manual-labour">
+                        <a href="#"><i class="fas fa-hammer"></i> Carpentry</a>
+                        <a href="#"><i class="fas fa-wrench"></i> Plumbing</a>
+                        <a href="#"><i class="fas fa-bolt"></i> Electrical</a>
+                        <a href="#"><i class="fas fa-paint-roller"></i> Painting</a>
+                    </div>
+                </div>
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="business">Business</a>
+                    <div class="dropdown-content" id="business">
+                        <a href="#"><i class="fas fa-chart-line"></i> Entrepreneurship</a>
+                        <a href="#"><i class="fas fa-money-bill-wave"></i> Finance</a>
+                        <a href="#"><i class="fas fa-briefcase"></i> Marketing</a>
+                        <a href="#"><i class="fas fa-users"></i> Management</a>
+                    </div>
+                </div>
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="digital-marketing">Digital marketing</a>
+                    <div class="dropdown-content" id="digital-marketing">
+                        <a href="#"><i class="fas fa-search"></i> SEO</a>
+                        <a href="#"><i class="fab fa-facebook-square"></i> Social Media Marketing</a>
+                        <a href="#"><i class="fas fa-file-alt"></i> Content Marketing</a>
+                        <a href="#"><i class="fas fa-envelope"></i> Email Marketing</a>
+                    </div>
+                </div>
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="academic-writing">Academic writing</a>
+                    <div class="dropdown-content" id="academic-writing">
+                        <!-- Subgroups for Academic Writing -->
+                        <a href="#"><i class="fas fa-pencil-alt"></i> Essay Writing</a>
+                        <a href="#"><i class="fas fa-book"></i> Research Papers</a>
+                        <a href="#"><i class="fas fa-graduation-cap"></i> Thesis Writing</a>
+                        <a href="#"><i class="fas fa-edit"></i> Editing & Proofreading</a>
+                    </div>
+                </div>
+                <div class="group-container">
+                    <a href="#" class="groups" data-target="consulting">Consulting</a>
+                    <div class="dropdown-content" id="consulting">
+                        <!-- Subgroups for Consulting -->
+                        <a href="#"><i class="fas fa-briefcase"></i> Management Consulting</a>
+                        <a href="#"><i class="fas fa-laptop-code"></i> IT Consulting</a>
+                        <a href="#"><i class="fas fa-money-bill-wave"></i> Financial Consulting</a>
+                        <a href="#"><i class="fas fa-balance-scale"></i> Legal Consulting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+    <section class="welcome-section" id="welcome-section">
+      <div class="welcome-text">
+        <h1>Welcome to P-Lan Event Management System</h1>
+        <p id="dynamic-text">Organize, Plan, and Celebrate with Ease</p>
+        <button class="create-event-btn" onclick="Event()" >Create an event</button>
+      </div>
+
+      <!-- New Features Section Inside Welcome Section -->
+      <section class="features-section">
+        <div class="feature">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Event Scheduling</h3>
+          <p>
+            Easily schedule your events and get reminders so you never miss a
+            thing.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-users"></i>
+          <h3>Guest Management</h3>
+          <p>
+            Invite and manage your event attendees with personalized digital
+            invitations.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-credit-card"></i>
+          <h3>Secure Payments</h3>
+          <p>
+            Book venues and services with secure and flexible payment options.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-sync-alt"></i>
+          <h3>Easy Rescheduling</h3>
+          <p>Change event dates and timings with ease to suit your plans.</p>
+        </div>
+      </section>
+    </section>
+
+    
+
+
+        <div class="container">
+            <div class="content">
+                <p class="tagline">Elevate Your needs,Elevate your career</p>
+               
+                <p class="description">Discover endless opportunities to grow and excel with our community of verified experts. From specialized Professionals
+                to tailored mentorship, we have everything you need to succeed in the freelance world</p>
+                <button class="continue-application" id="toggleAbout">
+                    <div>
+                        <div class="pencil"></div>
+                        <div class="folder">
+                            <div class="top">
+                                <svg viewBox="0 0 24 27">
+                                    <path
+                                        d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="paper"></div>
+                        </div>
+                    </div>
+                    Create a post
+                </button>
+                <div class="About" id="About">
+                    <p><i class="fas fa-lightbulb"></i>What service do you want us to provide you with?</p>
+
+<form class="post-container" action="/submit" method="POST">
+  <input type="text" name="name" id="nameInput" placeholder="Enter Your Full name">
+  
+  <select class="category" name="title" id="titleInput">
+    <option value="">Select category of service</option>
+  </select>
+  
+  <textarea name="description" id="descriptionInput" placeholder="Tell us a brief description of what you want"></textarea>
+  
+<input type="number" name="amount" id="amountInput" placeholder="Amount you wish to pay in ksh">
+
+  <button type="submit" class="create-post-btn" id="createPostBtn"><i class="fas fa-plus"></i> Create Post</button>
+</form>
+</div>   
+ <!-- Popups -->
+            <div class="popup success" id="popup-success"><i class="fas     fa-check-circle"></i> Post created successfully!</div>
+                <div class="popup warning" id="popup-warning"><i class="fas fa-exclamation-circle"></i> Your post has been submitted
+                successfully!</div>
+            </div>         
+            <img src="images/d.jpeg" alt="Education Platform Image" />
+        </div>      
+           <div class="gigs"><h4>Find and hire an expert</h4></div>
+    <div class="profile-sections">    
+    </div>
+</div>
+       <!-- Contact Us Section -->
+<div class="contact-us-section">
+    <h2>Contact Us</h2>
+    
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Your Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject:</label>
+                    <input type="text" id="subject" placeholder="Enter subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message:</label>
+                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="google-maps">
+            <h3>Find Us Here</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127942.32747848313!2d36.7073074415073!3d-1.286389349762492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17398e6d6b2d%3A0x5ff29db84943bb5e!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1632525979723!5m2!1sen!2s" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-about">
+            <h4>About Us</h4>
+            <p>We are committed to providing top-notch event management services across Kenya, ensuring that every occasion is memorable and stress-free. From weddings to corporate events, we offer premium venues and exceptional service.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#rooms">Rooms & Venues</a></li>
+                <li><a href="#reviews">Customer Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            <p><i class="fas fa-phone"></i> +254 705103864</p>
+            <p><i class="fas fa-envelope"></i>wallacewambulwa@gmail.com</p>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 P-lan Event Management. All Rights Reserved.</p>
+    </div>
+</footer>
+    <script src="scripts/client.js"></script>
+      <script src="scripts/homepage.js"></script>
+</body>
+</html>

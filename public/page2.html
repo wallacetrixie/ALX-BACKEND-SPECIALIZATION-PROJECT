@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication channel</title>
+    <link rel="stylesheet" href="styles/page2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+    <div class="cont">
+        <div class="header">
+            <div class="profile">
+                <img src="/images/user.jpeg" alt="Profile Picture">
+                <div class="profile-details">
+                    <h3 class="name">Sammy amani</h3>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fas fa-phone" data-tooltip="Call"></i>
+                <i class="fas fa-video" data-tooltip="Video Call"></i>
+            </div>
+            <div class="options">
+                <i class="fas fa-ellipsis-v" data-tooltip="Options"></i>
+            </div>
+        </div>
+        <div class="message-container">
+            <div class="sent">
+            </div>
+            <div class="received">
+            </div>
+        </div>
+        <div class="message-input-container">
+            <input type="text" id="messageInput" class="message-input" placeholder="Type your message here">
+            <button onclick="fetchNotifications()" id="sendButton" class="send-button" data-tooltip="Send Message"><i class="fas fa-paper-plane"></i></button>
+       
+        </div>
+    </div>
+     <div class="container">
+       <h1>Received Files</h1>
+       <div id="fileList"></div>
+    </div>
+    </div>
+
+    <script src="scripts/page2.js">
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const userName = params.get('name');
+            const nameElement = document.querySelector('.name');
+            nameElement.textContent = userName;
+        });
+        
+    </script>
+  
+</body>
+</html>
