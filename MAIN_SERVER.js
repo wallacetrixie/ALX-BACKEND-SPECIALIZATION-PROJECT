@@ -533,6 +533,26 @@ app.post("/admin/reviews/deny/:id", (req, res) => {
 });
 
 
+//CONTACT US SECTION
+// Endpoint to handle contact form submission
+app.post('/submit-contact', (req, res) => {
+    const { name, email, subject, message } = req.body;
+  const details = { name, email, subject, message,};
+    connection.query("INSERT INTO contacts SET ?",details, (err, result) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Error submitting your contact details');
+        } else {
+           res.send(
+             '<script>alert("Message sent successfully");</script>'
+           );
+           return;
+          
+          
+        }
+    });
+});
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", req.url));
 });

@@ -10,10 +10,7 @@ body {
   border: none;
   border: 0px;
   flex-wrap: wrap;
-  justify-content: evenly;
-  padding-left: 100px;
-  padding-right: 100px;
-  background-color:red;
+
   margin: auto;
   height: auto;
   flex-direction: row;
@@ -22,14 +19,15 @@ body {
 
 .profile-section {
   background-color: white;
-  width: 29%;
+  width:30%;
   border: none;
-  height: auto;
+  height:auto;
+  margin-left:40px;
   margin-top: 20px;
   border: 0px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 5px;
+  padding: 10px;
 }
 
 .profile-section:hover {
@@ -74,11 +72,12 @@ body {
 
 /* Hire button */
 .profile-section .hire-button {
-  background-color: #ff226f;
+  background-color: rgb(108, 98, 245);
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  align-items: baseline;
   font-size: 16px;
   cursor: pointer;
   width: 100px;
@@ -500,17 +499,16 @@ p {
 }
 
 .container {
-  width:80%;
+  width:100%;
   margin: auto;
   margin-top:80px;
-  background-color: #fff;
+  background-color: #fffffffd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
-
   flex-direction: row;
-  align-items: center;
+
   overflow: hidden;
   height: auto;
   /* Prevent image overflow */
@@ -522,6 +520,7 @@ p {
 
 .content {
   text-align: center;
+  width:100%;
   padding-bottom: 20px;
 }
 
