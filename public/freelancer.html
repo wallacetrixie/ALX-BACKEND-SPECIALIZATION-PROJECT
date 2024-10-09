@@ -8,6 +8,11 @@
     <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/review.css">
+    <link rel="stylesheet" href="styles/client.css">
+     <link rel="stylesheet" href="styles/footer.css">
+      <link rel="stylesheet" href="styles/contact.css">
+
     <title>Freelancers</title>
 </head>
 <body>
@@ -26,7 +31,6 @@
          <div class="profile-details">
             <img src="images/user.jpeg" class="dropdown-pic">
             <div class="name"><p class="user-name"></p></div>
-            <div class="account"><p>Account Type Freelancer</p></div>
             <button class="btn btn-settings" id="myAccountBtn"><i class="fas fa-cog"></i>My account</button>
            <button class="btn btn-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i>Logout</button>
 
@@ -121,87 +125,57 @@
 </div></div>
 
 
-<div class="container">
-            <div class="content">
-               
-                <h1>Discover The difference</h1>
-                <p class="description">Discover endless opportunities to grow and excel with our community of verified experts. From specialized Professionals
-                to tailored mentorship, we have everything you need to succeed in the freelance world</p>
-       
- </div>    
-           
-            <img src="images/join.jpeg" alt="Education Platform Image" />
 
-        </div>
+   <section class="welcome-section" id="welcome-section">
+      <div class="welcome-text">
+        <h1>CONNECT AND WORK WITH CLIENTS GLOBALLY</h1>
+        <p id="dynamic-text">Offer your best services to clients </p>
+        <button class="create-event-btn"  >we value you</button>
+      </div>
 
-        <!-- <div class="display">
-            <div class="item">
-                <div class="item-content">
-                    <i class="fas fa-desktop" style="color: orange;"></i>
-                    <div class="brief">
-                        <h2>50+</h2>
-                        <p>Services</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item" style="background-color: #eef7ea;">
-                <div class="item-content">
-                    <i class="fas fa-user-check" style="color: rgb(238, 140, 189);"></i>
-                    <div class="brief">
-                        <h2>100+</h2>
-                        <p>Verified Clients</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item" style="background-color: #f9e4fc;">
-                <div class="item-content">
-                    <i class="fas fa-user-tie" style="color: rgb(129, 91, 165);"></i>
-                    <div class="brief">
-                        <h2>200+</h2>
-                        <p>Experts</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item" style="background-color: #f1f1e0;">
-                <div class="item-content">
-                    <i class="fas fa-star" style="color: rgb(111, 116, 185);"></i>
-                    <div class="brief">
-                        <h2>5 Star</h2>
-                        <p>Ratings</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div> -->
+      <!-- New Features Section Inside Welcome Section -->
+<!-- New Features Section Inside Welcome Section -->
+<section class="features-section">
+  <div class="feature">
+    <i class="fas fa-briefcase"></i>
+    <h3>Project Management</h3>
+    <p>
+      Easily manage your freelance projects, from hiring to completion.
+    </p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-users"></i>
+    <h3>Client & Freelancer Collaboration</h3>
+    <p>
+      Connect with clients or freelancers and collaborate effectively through our platform.
+    </p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-credit-card"></i>
+    <h3>Secure Payments</h3>
+    <p>
+      Ensure secure and timely payments for every project with flexible options.
+    </p>
+  </div>
+  <div class="feature">
+    <i class="fas fa-sync-alt"></i>
+    <h3>Easy Project Adjustments</h3>
+    <p>
+      Make changes to project details and deadlines effortlessly to suit your needs.
+    </p>
+  </div>
+</section>
+
+ </section>
 
 
-<div class="gigs"><h4>Recent Posts From clients</h4></div>
-<!-- POSTS FROM THE CLIENT SIDE -->
-<div class="posts" id="postsContainer">
-        <h1>Recent Posts</h1>
-        <!-- Skeleton post -->
-        <div class="skeleton-post">
-            <h2>Loading...</h2>
-            <p>Loading...</p>
-            <p>Loading...</p>
-            <button class="apply-btn" disabled><i class="fas fa-suitcase"></i> Apply</button>
-            <button class="message-btn" disabled><i class="far fa-envelope"></i> Message</button>
-            <div class="rating">
-                <span class="rating-text">Rate:</span>
-                <span class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </span>
-            </div>
-        </div>
-        <!-- End of skeleton post -->
-    </div>
+
+
+
+
 
     
-<div class="master-card" id="courseList"></div>
+<div class="master-card" id="courseList">OUR SERVICES</div>
 <div class="choices">
     <div class="choice" id="choice1">Programming and Tech</div>
     <div class="choice" id="choice2">Digital marketing</div>
@@ -469,40 +443,260 @@
 
 </div>
 </section>
-
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+ <!-- How It Works Section -->
+<div class="how-it-works-section">
+    <h2>How It Works</h2>
+    <div class="how-it-works-container">
+        <!-- Step 1: Sign Up -->
+        <div class="how-it-works-step">
+            <i class="fas fa-user-plus"></i>
+            <h3>Sign Up</h3>
+            <p>Create an account by signing up with your details to access a wide range of freelancers.</p>
         </div>
-        <div class="footer-contact">
-            <h3>Contact Us</h3>
-            <p>Email: wallacewambulwa@gmail.com</p>
-            <p>Phone: +254725618425</p>
-            <p>Address: 1101 Langata,Nairobi, Kenya</p>
+        
+        <!-- Step 2: Create Your Profile -->
+        <div class="how-it-works-step">
+            <i class="fas fa-user"></i>
+            <h3>Step 1: Create Your Profile</h3>
+            <p>Set up your client profile to showcase your needs and let freelancers know who they’ll be working with.</p>
         </div>
-        <div class="footer-social">
-            <h3>Follow Us</h3>
-            <ul>
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
+        
+        <!-- Step 3: Post a Task -->
+        <div class="how-it-works-step">
+            <i class="fas fa-tasks"></i>
+            <h3>Step 2: Post a Task</h3>
+            <p>Describe the task you need done, set your budget, and specify deadlines to attract the right talent.</p>
+        </div>
+        
+        <!-- Step 4: Get Your Task Done -->
+        <div class="how-it-works-step">
+            <i class="fas fa-check-circle"></i>
+            <h3>Step 3: Get Your Task Done</h3>
+            <p>Once you’ve hired a freelancer, manage the project, track progress, and get the job done to your satisfaction.</p>
         </div>
     </div>
+</div>
+
+
+<div class="gigs"><h4>Recent Posts From clients</h4></div>
+<!-- POSTS FROM THE CLIENT SIDE -->
+<div class="posts" id="postsContainer">
+        <h1>Recent Posts</h1>
+        <!-- Skeleton post -->
+        <div class="skeleton-post">
+            <h2>Loading...</h2>
+            <p>Loading...</p>
+            <p>Loading...</p>
+            <button class="apply-btn" disabled><i class="fas fa-suitcase"></i> Apply</button>
+            <button class="message-btn" disabled><i class="far fa-envelope"></i> Message</button>
+            <div class="rating">
+                <span class="rating-text">Rate:</span>
+                <span class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </span>
+            </div>
+        </div>
+        <!-- End of skeleton post -->
+    </div>
+
+
+
+<!-- Contact Us Section -->
+<div class="contact-us-section">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form action="/submit-contact" method="POST">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="google-maps">
+            <h3>Find Us Here</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127942.32747848313!2d36.7073074415073!3d-1.286389349762492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17398e6d6b2d%3A0x5ff29db84943bb5e!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1632525979723!5m2!1sen!2s" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<section>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 col-xl-8 text-center">
+      <h3 class="mb-4">What Our Users Are Saying</h3>
+      <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+        See how our platform has helped freelancers and clients streamline their work and achieve their goals. 
+        Real stories from real users making connections and completing successful projects.
+      </p>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-md-4 mb-5 mb-md-0">
+      <div class="d-flex justify-content-center mb-4">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+          class="rounded-circle shadow-1-strong" width="150" height="150" />
+      </div>
+      <h5 class="mb-3">Mary wambui</h5>
+      <h6 class="text-primary mb-3">Web Developer</h6>
+      <p class="px-xl-3">
+        <i class="fas fa-quote-left pe-2"></i>"This platform has transformed my freelancing career. I’ve connected with amazing clients and completed numerous projects with ease. Highly recommended for any freelancer!"
+      </p>
+      <ul class="list-unstyled d-flex justify-content-center mb-0">
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-4 mb-5 mb-md-0">
+      <div class="d-flex justify-content-center mb-4">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+          class="rounded-circle shadow-1-strong" width="150" height="150" />
+      </div>
+      <h5 class="mb-3">Lisa nyantima</h5>
+      <h6 class="text-primary mb-3">Graphic Designer</h6>
+      <p class="px-xl-3">
+        <i class="fas fa-quote-left pe-2"></i>"Thanks to this freelancing system, I’ve been able to secure consistent projects and grow my portfolio. The interface is intuitive, and the clients are great to work with!"
+      </p>
+      <ul class="list-unstyled d-flex justify-content-center mb-0">
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-4 mb-0">
+      <div class="d-flex justify-content-center mb-4">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+          class="rounded-circle shadow-1-strong" width="150" height="150" />
+      </div>
+      <h5 class="mb-3">Martin onyancha</h5>
+      <h6 class="text-primary mb-3">Marketing Specialist</h6>
+      <p class="px-xl-3">
+        <i class="fas fa-quote-left pe-2"></i>"As a client, I’ve been able to hire skilled freelancers easily and efficiently. The project management features make everything run smoothly from start to finish."
+      </p>
+      <ul class="list-unstyled d-flex justify-content-center mb-0">
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="fas fa-star fa-sm text-warning"></i>
+        </li>
+        <li>
+          <i class="far fa-star fa-sm text-warning"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-about">
+            <h4>About Us</h4>
+            <p>We are commmited to provide best freelancing services by linking clients with skilled experts in different fields globally</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#rooms">Rooms & Venues</a></li>
+                <li><a href="#reviews">Customer Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            <p><i class="fas fa-phone"></i> +254 705103864</p>
+            <p><i class="fas fa-envelope"></i>wallacewambulwa@gmail.com</p>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
     <div class="footer-bottom">
-        <p>&copy; 2024 Taskify. All rights reserved.</p>
+        <p>&copy; 2024 Taskify best freelancing platform All Rights Reserved.</p>
     </div>
 </footer>
 
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/homepage.js"></script>
+      <script src="scripts/works.js"></script>
      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
